@@ -1,4 +1,4 @@
-const ladderLength = require('./v1');
+const ladderLength = require('./127.Word_Ladder');
 
 describe('ladderLength', () => {
     it('ladderLength v1', () => {
