@@ -1,6 +1,11 @@
 /* 
 Title: 1. Two Sum
 URL: https://leetcode.com/problems/two-sum/
+Personal Submission:
+    https://leetcode.com/submissions/detail/444235489/
+    52 / 52 test cases passed
+    Runtime: 92 ms, faster than 15.15% of JavaScript online submissions for Two Sum.
+    Memory Usage: 42.2 MB, less than 5.57% of JavaScript online submissions for Two Sum.
 
 ----
 Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
@@ -48,3 +53,5 @@ const twoSum = function(nums, target) {
     });
     return result;
 };
+
+module.exports = twoSum;

@@ -1,6 +1,11 @@
 /*
 Title: 1646. Get Maximum in Generated Array
 URL: https://leetcode.com/problems/get-maximum-in-generated-array/
+Personal Submission:
+    https://leetcode.com/submissions/detail/444235199/
+    101 / 101 test cases passed.
+    Runtime: 80 ms, faster than 55.23% of JavaScript online submissions for Get Maximum in Generated Array.
+    Memory Usage: 38.6 MB, less than 69.97% of JavaScript online submissions for Get Maximum in Generated Array.
 
 ----
 You are given an integer n. An array nums of length n + 1 is generated in the following way:
@@ -101,7 +106,7 @@ var getMaximumGeneratedTime = function(n) {
     let max = 1;
     
     for (let i = 2; i <= n; i++) {
-        // ~~ operator is similar to Math.floor to transform float to int but more faster
+        //TODO COMMENT: ~~ operator is similar to Math.floor to transform float to int but more faster
         let half = ~~(i/2);
         if (i % 2 === 0) arr[i] = arr[half];
         else arr[i] = arr[half] + arr[half + 1];
@@ -113,3 +118,5 @@ var getMaximumGeneratedTime = function(n) {
 
     
 };
+
+module.exports = getMaximumGenerated;

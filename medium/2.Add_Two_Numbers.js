@@ -1,7 +1,11 @@
 /*
 Title: 2. Add Two Numbers
 URL: https://leetcode.com/problems/add-two-numbers/
-
+Personal Submission:
+    https://leetcode.com/submissions/detail/444234402/
+    1568 / 1568 test cases passed.
+    Runtime: 180 ms, faster than 13.14% of JavaScript online submissions for Add Two Numbers.
+    Memory Usage: 45.3 MB, less than 15.69% of JavaScript online submissions for Add Two Numbers.
 ----
 You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order, and each of their nodes contains a single digit. Add the two numbers and return the sum as a linked list.
 

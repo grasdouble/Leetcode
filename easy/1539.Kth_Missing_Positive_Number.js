@@ -1,0 +1,63 @@
+/*
+Title: 1539. Kth Missing Positive Number
+URL: https://leetcode.com/problems/kth-missing-positive-number/
+Personal Submission:
+    https://leetcode.com/submissions/detail/444251502/
+    84 / 84 test cases passed.
+    Runtime: 84 ms, faster than 50.29% of JavaScript online submissions for Kth Missing Positive Number.
+    Memory Usage: 39.7 MB, less than 27.26% of JavaScript online submissions for Kth Missing Positive Number.
+
+----
+Given an array arr of positive integers sorted in a strictly increasing order, and an integer k.
+
+Find the kth positive integer that is missing from this array.
+
+ 
+
+Example 1:
+
+Input: arr = [2,3,4,7,11], k = 5
+Output: 9
+Explanation: The missing positive integers are [1,5,6,8,9,10,12,13,...]. The 5th missing positive integer is 9.
+Example 2:
+
+Input: arr = [1,2,3,4], k = 2
+Output: 6
+Explanation: The missing positive integers are [5,6,7,...]. The 2nd missing positive integer is 6.
+ 
+
+Constraints:
+
+1 <= arr.length <= 1000
+1 <= arr[i] <= 1000
+1 <= k <= 1000
+arr[i] < arr[j] for 1 <= i < j <= arr.length
+
+*/
+
+/**
+ * @param {number[]} arr
+ * @param {number} k
+ * @return {number}
+ */
+var findKthPositive = function(arr, k) {
+    let counter = 1;
+    const missingValue = [];
+    arr.some(elm =>{
+        while(counter!==elm){
+            missingValue.push(counter);
+            counter++;
+        }
+        counter++;
+        return missingValue.length === k;
+    });
+    if(missingValue.length<k){
+        while(missingValue.length<k){
+            missingValue.push(counter);
+            counter++;
+        }
+    }
+    return missingValue[k-1];
+};
+
+module.exports = findKthPositive;
