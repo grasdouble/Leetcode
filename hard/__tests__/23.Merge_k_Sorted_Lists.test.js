@@ -14,6 +14,7 @@ describe('mergeKLists', () => {
     });
     
     it('test 3', () => {
-        expect(mergeKLists([new ListNode(null)])).toEqual(null);
+        const n1 = new ListNode(undefined, new ListNode(2, new ListNode(5, null)))
+        expect(mergeKLists([n1])).toEqual(n1);
     });
 });

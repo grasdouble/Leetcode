@@ -64,7 +64,7 @@ var mergeKLists = function(lists) {
     let result = null;
     lists.forEach(elm =>{
         let node = elm;
-        while(node && node.val){
+        while(node){
             arr.push(node.val);
             node = node.next;
         }
