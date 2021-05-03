@@ -53,7 +53,7 @@ var fizzBuzz = function(n) {
         }else if(mod5){
             res.push('Buzz');
         }else{
-            res.push(i.toString());    
+            res.push(i.toString());
         }
     }
     return res;

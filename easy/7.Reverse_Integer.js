@@ -45,6 +45,7 @@ Constraints:
 var reverse = function(x) {
     const isNegative = x < 0;
     const result = +String(Math.abs(x)).split("").reverse().join('');
+    // 0x7FFFFFFF maximum value for a signed 32-bit integer
     if(result > 0x7FFFFFFF) return 0;
     return isNegative ? -result : result;
 };

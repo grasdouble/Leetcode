@@ -8,7 +8,7 @@ Personal Submission:
     Memory Usage: 38.6 MB, less than 56.20% of JavaScript online submissions for Three Consecutive Odds
 
 ----
-Given an integer array arr, return true if there are three consecutive odd numbers in the array. Otherwise, return false.
+Given an integer array arr, return true if there are three consecutive odd numbers in the array. Otherwise, return false. (odd = impair in french)
  
 Example 1:
 
