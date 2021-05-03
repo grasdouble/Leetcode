@@ -45,12 +45,14 @@ Only one valid answer exists.
 const twoSum = function(nums, target) {
     const comp = {};
     let result = [];
-    nums.forEach((elm, idx)=>{
+    for (const [idx, elm] of nums.entries()) {
         if(comp[elm]>=0){
-            result = [comp[elm] , idx]
+            result = [comp[elm] , idx];
+            break;
         }
-        comp[target-elm] = idx
-    });
+        comp[target-elm] = idx;
+        console.log(comp);
+    };
     return result;
 };
 
