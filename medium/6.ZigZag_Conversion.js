@@ -2,7 +2,7 @@
 Title: 6. ZigZag Conversion
 URL: https://leetcode.com/problems/zigzag-conversion/
 Personal Submission:
-    https://leetcode.com/submissions/detail/XXXXXXXXX/
+    https://leetcode.com/submissions/detail/488464751/
     1157 / 1157 test cases passed.
     Runtime: 100ms, Your runtime beats 93.17 % of javascript submissions.
     Memory Usage: 45 MB, Your memory usage beats 40.27 % of javascript submissions.

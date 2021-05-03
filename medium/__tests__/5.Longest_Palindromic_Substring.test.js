@@ -5,7 +5,7 @@ describe('longestPalindrome', () => {
         expect(longestPalindrome('babad')).toEqual('bab');
     });
 
-    it('test 2', () => {        
+    it('test 2', () => {
         expect(longestPalindrome('cbbd')).toEqual('bb');
     });
 

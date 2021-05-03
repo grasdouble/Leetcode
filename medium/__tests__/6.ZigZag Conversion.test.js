@@ -5,7 +5,7 @@ describe('convert', () => {
         expect(convert('PAYPALISHIRING',3)).toEqual('PAHNAPLSIIGYIR');
     });
 
-    it('test 2', () => {        
+    it('test 2', () => {
         expect(convert('PAYPALISHIRING',4)).toEqual('PINALSIGYAHRPI');
     });
 
