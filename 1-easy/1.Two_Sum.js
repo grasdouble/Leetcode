@@ -51,7 +51,6 @@ const twoSum = function(nums, target) {
             break;
         }
         comp[target-elm] = idx;
-        console.log(comp);
     };
     return result;
 };
