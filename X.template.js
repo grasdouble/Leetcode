@@ -11,3 +11,7 @@ Personal Submission:
 Description
 
 */
+
+var template = () => true;
+
+module.exports = template;
