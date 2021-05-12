@@ -66,51 +66,51 @@ It is guaranteed that s is a valid roman numeral in the range [1, 3999].
  * @param {string} s
  * @return {number}
  */
- var romanToInt = function(s) {
-    const arr = s.split('');
-    let tmpResult=0;
-    arr.forEach(elm =>{
-        if(elm === 'I'){
-            tmpResult++;
-        }else if(elm === 'V'){
-            if(tmpResult % 10 === 1){
-                tmpResult+=3;
-            }else{
-                tmpResult+=5;
-            }
-        }else if(elm === 'X'){
-            if(tmpResult % 10 === 1){
-                tmpResult+=8;
-            }else{
-                tmpResult+=10;
-            }
-        }else if(elm === 'L'){
-            if(tmpResult % 100 === 10){
-                tmpResult+=30;
-            }else{
-                tmpResult+=50;
-            }
-        }else if(elm === 'C'){
-            if(tmpResult % 100 === 10){
-                tmpResult+=80;
-            }else{
-                tmpResult+=100;
-            }
-        }else if(elm === 'D'){
-            if(tmpResult % 1000 === 100){
-                tmpResult+=300;
-            }else{
-                tmpResult+=500;
-            }
-        }else if(elm === 'M'){
-            if(tmpResult % 1000 === 100){
-                tmpResult+=800;
-            }else{
-                tmpResult+=1000;
-            }
-        }
-    });
-    return tmpResult;
+var romanToInt = function (s) {
+  const arr = s.split("");
+  let tmpResult = 0;
+  arr.forEach((elm) => {
+    if (elm === "I") {
+      tmpResult++;
+    } else if (elm === "V") {
+      if (tmpResult % 10 === 1) {
+        tmpResult += 3;
+      } else {
+        tmpResult += 5;
+      }
+    } else if (elm === "X") {
+      if (tmpResult % 10 === 1) {
+        tmpResult += 8;
+      } else {
+        tmpResult += 10;
+      }
+    } else if (elm === "L") {
+      if (tmpResult % 100 === 10) {
+        tmpResult += 30;
+      } else {
+        tmpResult += 50;
+      }
+    } else if (elm === "C") {
+      if (tmpResult % 100 === 10) {
+        tmpResult += 80;
+      } else {
+        tmpResult += 100;
+      }
+    } else if (elm === "D") {
+      if (tmpResult % 1000 === 100) {
+        tmpResult += 300;
+      } else {
+        tmpResult += 500;
+      }
+    } else if (elm === "M") {
+      if (tmpResult % 1000 === 100) {
+        tmpResult += 800;
+      } else {
+        tmpResult += 1000;
+      }
+    }
+  });
+  return tmpResult;
 };
 
 module.exports = romanToInt;

@@ -46,8 +46,8 @@ word1[i] and word2[i] consist of lowercase letters.
  * @param {string[]} word2
  * @return {boolean}
  */
-var arrayStringsAreEqual = function(word1, word2) {
-    return word1.join("") == word2.join("");
+var arrayStringsAreEqual = function (word1, word2) {
+  return word1.join("") == word2.join("");
 };
 
 module.exports = arrayStringsAreEqual;

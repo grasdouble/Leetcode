@@ -36,23 +36,22 @@ Constraints:
 Only one valid answer exists. 
 */
 
-
 /**
  * @param {number[]} nums
  * @param {number} target
  * @return {number[]}
  */
-const twoSum = function(nums, target) {
-    const comp = {};
-    let result = [];
-    for (const [idx, elm] of nums.entries()) {
-        if(comp[elm]>=0){
-            result = [comp[elm] , idx];
-            break;
-        }
-        comp[target-elm] = idx;
-    };
-    return result;
+const twoSum = function (nums, target) {
+  const comp = {};
+  let result = [];
+  for (const [idx, elm] of nums.entries()) {
+    if (comp[elm] >= 0) {
+      result = [comp[elm], idx];
+      break;
+    }
+    comp[target - elm] = idx;
+  }
+  return result;
 };
 
 module.exports = twoSum;

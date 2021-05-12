@@ -54,12 +54,12 @@ nums2.length == n
  * @param {number[]} nums2
  * @return {number}
  */
-var findMedianSortedArrays = function(nums1, nums2) {
-    const arr = nums1.concat(nums2).sort((a, b) => a - b);
-    if(arr.length == 1) return arr[0]
-    
-    const mid = Math.floor(arr.length / 2);
-    return arr.length % 2 !== 0 ? arr[mid] : (arr[mid - 1] + arr[mid]) / 2;
+var findMedianSortedArrays = function (nums1, nums2) {
+  const arr = nums1.concat(nums2).sort((a, b) => a - b);
+  if (arr.length == 1) return arr[0];
+
+  const mid = Math.floor(arr.length / 2);
+  return arr.length % 2 !== 0 ? arr[mid] : (arr[mid - 1] + arr[mid]) / 2;
 };
 
 module.exports = findMedianSortedArrays;

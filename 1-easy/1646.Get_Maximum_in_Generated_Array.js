@@ -53,45 +53,41 @@ Constraints:
 0 <= n <= 100
 */
 
-
 /**
  * @param {number} n
  * @return {number}
  */
-var getMaximumGenerated = function(n) {
-    var nums=[0,1];
-    
-    for(i=1;i<n;i++){
-        if((2*i)<=n && (2*i+1)<=n){
-            nums[2*i]=nums[i]
-            nums[2*i+1]=nums[i]+nums[i+1]
-        }
+var getMaximumGenerated = function (n) {
+  var nums = [0, 1];
+
+  for (i = 1; i < n; i++) {
+    if (2 * i <= n && 2 * i + 1 <= n) {
+      nums[2 * i] = nums[i];
+      nums[2 * i + 1] = nums[i] + nums[i + 1];
     }
-    
-    return n == 0? 0 : Math.max(...nums);
+  }
 
+  return n == 0 ? 0 : Math.max(...nums);
 };
-
 
 /* Other Solution with Less Memory */
 /**
  * @param {number} n
  * @return {number}
  */
-var getMaximumGeneratedMemory = function(n) {
-    let k=[0,1];
-    
-    if(n<=0) return k[0];
-    
-    for(let i=1;i<n;i++){
-        if((2*i)<=n && (2*i+1)<=n){
-        k[2*i]=k[i]
-        k[2*i+1]=k[i]+k[i+1]
-    }
-    }
-    
-    return Math.max(...k);
+var getMaximumGeneratedMemory = function (n) {
+  let k = [0, 1];
 
+  if (n <= 0) return k[0];
+
+  for (let i = 1; i < n; i++) {
+    if (2 * i <= n && 2 * i + 1 <= n) {
+      k[2 * i] = k[i];
+      k[2 * i + 1] = k[i] + k[i + 1];
+    }
+  }
+
+  return Math.max(...k);
 };
 
 /* Other Solution with Less Time */
@@ -99,24 +95,22 @@ var getMaximumGeneratedMemory = function(n) {
  * @param {number} n
  * @return {number}
  */
-var getMaximumGeneratedTime = function(n) {
-    if (n === 0) return 0;
-    
-    let arr = [0, 1];
-    let max = 1;
-    
-    for (let i = 2; i <= n; i++) {
-        //TODO COMMENT: ~~ operator is similar to Math.floor to transform float to int but more faster
-        let half = ~~(i/2);
-        if (i % 2 === 0) arr[i] = arr[half];
-        else arr[i] = arr[half] + arr[half + 1];
+var getMaximumGeneratedTime = function (n) {
+  if (n === 0) return 0;
 
-        max = Math.max(max, arr[i]);
-    }
+  let arr = [0, 1];
+  let max = 1;
 
-    return max;
+  for (let i = 2; i <= n; i++) {
+    //TODO COMMENT: ~~ operator is similar to Math.floor to transform float to int but more faster
+    let half = ~~(i / 2);
+    if (i % 2 === 0) arr[i] = arr[half];
+    else arr[i] = arr[half] + arr[half + 1];
 
-    
+    max = Math.max(max, arr[i]);
+  }
+
+  return max;
 };
 
 module.exports = getMaximumGenerated;

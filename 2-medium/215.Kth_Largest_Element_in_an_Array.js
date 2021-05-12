@@ -28,7 +28,7 @@ You may assume k is always valid, 1 ≤ k ≤ array's length.
  * @param {number} k
  * @return {number}
  */
-var findKthLargest = function(nums, k) {
-    nums.sort((a, b) => b - a);
-    return nums[k-1];
+var findKthLargest = function (nums, k) {
+  nums.sort((a, b) => b - a);
+  return nums[k - 1];
 };

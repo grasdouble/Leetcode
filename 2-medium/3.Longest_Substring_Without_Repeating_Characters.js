@@ -45,20 +45,19 @@ s consists of English letters, digits, symbols and spaces.
  * @return {number}
  */
 
-const lengthOfLongestSubstring = function(s) {
-    const ln = s.length;
-    const arr = s.split('');
-    const store = {};
-    let result = 0;
-    
-    let firstIndex = 0;
-    arr.forEach((elm, idx) =>{
-        if(store[elm]){
-            firstIndex = Math.max(store[elm], firstIndex);
-        }
-        store[elm] = idx+1;
-        result = Math.max(result, store[elm] - firstIndex);
-        
-    })
-    return result;
+const lengthOfLongestSubstring = function (s) {
+  const ln = s.length;
+  const arr = s.split("");
+  const store = {};
+  let result = 0;
+
+  let firstIndex = 0;
+  arr.forEach((elm, idx) => {
+    if (store[elm]) {
+      firstIndex = Math.max(store[elm], firstIndex);
+    }
+    store[elm] = idx + 1;
+    result = Math.max(result, store[elm] - firstIndex);
+  });
+  return result;
 };

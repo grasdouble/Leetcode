@@ -31,20 +31,20 @@ Constraints:
  * @param {number[]} arr
  * @return {number}
  */
-var findSpecialInteger = function(arr) {
-    var resultList = {};
-    
-    arr.forEach(elm => {
-        if(!resultList[elm]){
-            resultList[elm] = 1;
-        }else{
-            resultList[elm] = resultList[elm]+1;
-        }
-    });
-    var result = Object.entries(resultList).reduce((a, e) => {
-      return e[1] > a[1] ? e : a
-    })
-    return parseInt(result[0]);
+var findSpecialInteger = function (arr) {
+  var resultList = {};
+
+  arr.forEach((elm) => {
+    if (!resultList[elm]) {
+      resultList[elm] = 1;
+    } else {
+      resultList[elm] = resultList[elm] + 1;
+    }
+  });
+  var result = Object.entries(resultList).reduce((a, e) => {
+    return e[1] > a[1] ? e : a;
+  });
+  return parseInt(result[0]);
 };
 
 module.exports = findSpecialInteger;

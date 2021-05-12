@@ -38,33 +38,31 @@ Constraints:
 
 */
 
-
-
 /**
  * @param {number} n
  * @return {number}
  */
-var countVowelStrings = function(n) {
-    let vowels = "aeiou";
-    //let vowels = ['a','e','i','o','u'];
-    let result = 0;
-    
-    function subTask(startIdx, possibleValue){
-        //if possibleValues respect the length (n)
-        if(possibleValue.length == n){
-            result++;
-            return;
-        }
+var countVowelStrings = function (n) {
+  let vowels = "aeiou";
+  //let vowels = ['a','e','i','o','u'];
+  let result = 0;
 
-        //if not continue to searhc possible values
-        for(let i=startIdx;i<vowels.length;i++){
-            subTask(i, [...possibleValue, i]);
-            //subTask(i, [...possibleValue, vowels[i]]);
-        }
+  function subTask(startIdx, possibleValue) {
+    //if possibleValues respect the length (n)
+    if (possibleValue.length == n) {
+      result++;
+      return;
     }
-    
-    subTask(0, []);
-    return result;
+
+    //if not continue to searhc possible values
+    for (let i = startIdx; i < vowels.length; i++) {
+      subTask(i, [...possibleValue, i]);
+      //subTask(i, [...possibleValue, vowels[i]]);
+    }
+  }
+
+  subTask(0, []);
+  return result;
 };
 
 module.exports = countVowelStrings;

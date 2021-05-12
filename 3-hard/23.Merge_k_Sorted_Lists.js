@@ -51,29 +51,29 @@ The sum of lists[i].length won't exceed 10^4.
  * Definition for singly-linked list.
  **/
 function ListNode(val, next) {
-    this.val = (val===undefined ? 0 : val)
-    this.next = (next===undefined ? null : next)
+  this.val = val === undefined ? 0 : val;
+  this.next = next === undefined ? null : next;
 }
 
 /**
  * @param {ListNode[]} lists
  * @return {ListNode}
  */
-var mergeKLists = function(lists) {
-    const arr = [];
-    let result = null;
-    lists.forEach(elm =>{
-        let node = elm;
-        while(node){
-            arr.push(node.val);
-            node = node.next;
-        }
-    });
-    arr.sort((a,b)=> b-a);
-    arr.forEach(elm =>{
-        result = new ListNode(elm, result);
-    })
-    return result;
+var mergeKLists = function (lists) {
+  const arr = [];
+  let result = null;
+  lists.forEach((elm) => {
+    let node = elm;
+    while (node) {
+      arr.push(node.val);
+      node = node.next;
+    }
+  });
+  arr.sort((a, b) => b - a);
+  arr.forEach((elm) => {
+    result = new ListNode(elm, result);
+  });
+  return result;
 };
 
-module.exports = {mergeKLists, ListNode};
+module.exports = { mergeKLists, ListNode };

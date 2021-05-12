@@ -48,8 +48,8 @@ n == height.length
  * @return {number}
  */
 
- var maxArea = function(height) {
-    /*
+var maxArea = function (height) {
+  /*
     let result = 0;
     height.forEach((elm,idx) => {
         for(i = 0; i<=idx; i++){
@@ -61,22 +61,22 @@ n == height.length
     return result;
     */
 
-    let idx = 0;
-    let jdx = height.length-1;
-    
-    let max = 0;
-    
-    while (idx < jdx) {
-        const tmp = Math.min(height[idx], height[jdx])*(jdx-idx);
-        max = Math.max(max, tmp);
-        if(height[idx] < height[jdx]){
-            idx++;
-        }else{
-            jdx--;
-        }
+  let idx = 0;
+  let jdx = height.length - 1;
+
+  let max = 0;
+
+  while (idx < jdx) {
+    const tmp = Math.min(height[idx], height[jdx]) * (jdx - idx);
+    max = Math.max(max, tmp);
+    if (height[idx] < height[jdx]) {
+      idx++;
+    } else {
+      jdx--;
     }
-    
-    return max;
+  }
+
+  return max;
 };
 
 module.exports = maxArea;

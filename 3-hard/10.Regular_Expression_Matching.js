@@ -58,9 +58,9 @@ It is guaranteed for each appearance of the character '*', there will be a previ
  * @param {string} p
  * @return {boolean}
  */
- var isMatch = function(s, p) {
-    const re = new RegExp(`^${p}$`);
-    return re.test(s);
+var isMatch = function (s, p) {
+  const re = new RegExp(`^${p}$`);
+  return re.test(s);
 };
 
 module.exports = isMatch;

@@ -35,7 +35,6 @@ The number of nodes in each linked list is in the range [1, 100].
 It is guaranteed that the list represents a number that does not have leading zeros.
 */
 
-
 /**
  * Definition for singly-linked list.
  * function ListNode(val, next) {
@@ -44,36 +43,34 @@ It is guaranteed that the list represents a number that does not have leading ze
  * }
  */
 
-const transformNode = (node, arr, isFirst) =>{
-    if(node.next){
-        arr = transformNode(node.next, arr, false);
-        arr = arr.concat(node.val);
-    }else if(node.val > 0){
-        arr = arr.concat(node.val);
-    }
-    return arr;
+const transformNode = (node, arr, isFirst) => {
+  if (node.next) {
+    arr = transformNode(node.next, arr, false);
+    arr = arr.concat(node.val);
+  } else if (node.val > 0) {
+    arr = arr.concat(node.val);
+  }
+  return arr;
 };
 
-const transformToNode = (value, next) =>{
-    const node = new ListNode(value);
-    node.next = next;
-    return node;
-}
+const transformToNode = (value, next) => {
+  const node = new ListNode(value);
+  node.next = next;
+  return node;
+};
 
 /**
  * @param {ListNode} l1
  * @param {ListNode} l2
  * @return {ListNode}
  */
-const addTwoNumbers = function(l1, l2) {
-    const l1Value = BigInt(transformNode(l1,'') || 0);
-    const l2Value = BigInt(transformNode(l2,'') || 0);
-    const calcResult = BigInt(l1Value + l2Value).toString();
-    let finalResult = null;
-    calcResult.split('').forEach(elm =>{
-        finalResult = transformToNode(elm, finalResult);
-    });
-    return finalResult;
-    
-    
+const addTwoNumbers = function (l1, l2) {
+  const l1Value = BigInt(transformNode(l1, "") || 0);
+  const l2Value = BigInt(transformNode(l2, "") || 0);
+  const calcResult = BigInt(l1Value + l2Value).toString();
+  let finalResult = null;
+  calcResult.split("").forEach((elm) => {
+    finalResult = transformToNode(elm, finalResult);
+  });
+  return finalResult;
 };

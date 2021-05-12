@@ -38,25 +38,25 @@ strs[i] consists of only lower-case English letters.
  * @param {string[]} strs
  * @return {string}
  */
- var longestCommonPrefix = function(strs) {
-    let t = strs[0].split('');
-    let tSize = t.length;
+var longestCommonPrefix = function (strs) {
+  let t = strs[0].split("");
+  let tSize = t.length;
 
-    strs.shift();
-    strs.forEach(elm =>{
-        const e = elm.split('');
-        if(tSize> e.length) {
-            t.splice(e.length, tSize);
-            tSize = t.length;
-        }
-        for(i = 0; i < tSize;i++){
-            if(e[i] != t[i]){
-                t.splice(i,tSize-i);
-                tSize = t.length;
-            }
-        }    
-    })
-    return t.join('');
+  strs.shift();
+  strs.forEach((elm) => {
+    const e = elm.split("");
+    if (tSize > e.length) {
+      t.splice(e.length, tSize);
+      tSize = t.length;
+    }
+    for (i = 0; i < tSize; i++) {
+      if (e[i] != t[i]) {
+        t.splice(i, tSize - i);
+        tSize = t.length;
+      }
+    }
+  });
+  return t.join("");
 };
 
 module.exports = longestCommonPrefix;

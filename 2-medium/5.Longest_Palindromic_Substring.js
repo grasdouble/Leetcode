@@ -41,30 +41,30 @@ s consist of only digits and English letters (lower-case and/or upper-case),
  * @param {string} s
  * @return {string}
  */
-var longestPalindrome = function(s) {
-    let result = s[0];
-    for(i=0; i < s.length; i++){
-        let str = s[i];
-        for(y=i+1; y < s.length; y++){
-            str+=s[y];
-            if(isPalindrome(str) && str.length > result.length) result = str;
-        }
+var longestPalindrome = function (s) {
+  let result = s[0];
+  for (i = 0; i < s.length; i++) {
+    let str = s[i];
+    for (y = i + 1; y < s.length; y++) {
+      str += s[y];
+      if (isPalindrome(str) && str.length > result.length) result = str;
     }
-    return result;
+  }
+  return result;
 };
 
-var isPalindrome = function(str){
-    let ok = true;
-    let beg = 0;
-    let end = str.length -1;
-    while(beg<end && ok){
-        if(str[beg] != str[end]){
-            ok=false;
-        }
-        beg++;
-        end--;
+var isPalindrome = function (str) {
+  let ok = true;
+  let beg = 0;
+  let end = str.length - 1;
+  while (beg < end && ok) {
+    if (str[beg] != str[end]) {
+      ok = false;
     }
-    return ok;
-}
+    beg++;
+    end--;
+  }
+  return ok;
+};
 
 module.exports = longestPalindrome;

@@ -56,7 +56,6 @@ target node is a node from the original tree and is not null.
 
 */
 
-
 /**
  * Definition for a binary tree node.
  * function TreeNode(val) {
@@ -71,26 +70,26 @@ target node is a node from the original tree and is not null.
  * @return {TreeNode}
  */
 
-const getTargetCopy = function(original, cloned, target) {
-    if(cloned.val === target.val){
-        return cloned;
-    }else{
-        return test(cloned.left, cloned.right, target);
-    }
+const getTargetCopy = function (original, cloned, target) {
+  if (cloned.val === target.val) {
+    return cloned;
+  } else {
+    return test(cloned.left, cloned.right, target);
+  }
 };
 
-const test = (r, l, t) =>{
-    let result = null;
-    if(r?.val === t.val){
-        result = r;
-    }else if(l?.val == t.val){
-        result = l;
-    }
-    if(!result){
-        result = (r?.left || r?.right)? test(r?.left, r?.right, t): null;
-    } 
-    if(!result){
-        result = (l?.left || l?.right) ? test(l?.left, l?.right, t): null;
-    }
-    return result;
-}
+const test = (r, l, t) => {
+  let result = null;
+  if (r?.val === t.val) {
+    result = r;
+  } else if (l?.val == t.val) {
+    result = l;
+  }
+  if (!result) {
+    result = r?.left || r?.right ? test(r?.left, r?.right, t) : null;
+  }
+  if (!result) {
+    result = l?.left || l?.right ? test(l?.left, l?.right, t) : null;
+  }
+  return result;
+};

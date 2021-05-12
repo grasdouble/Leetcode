@@ -41,22 +41,22 @@ Return:
  * @param {number} n
  * @return {string[]}
  */
-var fizzBuzz = function(n) {
-    var res = [];
-    for(i=1; i<=n;i++){
-        var mod3 = i%3 == 0;
-        var mod5 = i%5 == 0;
-        if( mod3 && mod5){
-            res.push('FizzBuzz');
-        }else if(mod3){
-            res.push('Fizz');
-        }else if(mod5){
-            res.push('Buzz');
-        }else{
-            res.push(i.toString());
-        }
+var fizzBuzz = function (n) {
+  var res = [];
+  for (i = 1; i <= n; i++) {
+    var mod3 = i % 3 == 0;
+    var mod5 = i % 5 == 0;
+    if (mod3 && mod5) {
+      res.push("FizzBuzz");
+    } else if (mod3) {
+      res.push("Fizz");
+    } else if (mod5) {
+      res.push("Buzz");
+    } else {
+      res.push(i.toString());
     }
-    return res;
+  }
+  return res;
 };
 
 module.exports = fizzBuzz;

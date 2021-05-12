@@ -33,14 +33,13 @@ Constraints:
  * @param {number[]} arr
  * @return {boolean}
  */
-var threeConsecutiveOdds = function(arr) {
-    var counter = 0;
-    arr.some(elm => {
-        counter = elm % 2 === 1 ? counter+1 : 0;
-        return counter === 3;
-    });
+var threeConsecutiveOdds = function (arr) {
+  var counter = 0;
+  arr.some((elm) => {
+    counter = elm % 2 === 1 ? counter + 1 : 0;
     return counter === 3;
-    
+  });
+  return counter === 3;
 };
 
 module.exports = threeConsecutiveOdds;

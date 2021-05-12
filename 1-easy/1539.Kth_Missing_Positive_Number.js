@@ -40,24 +40,24 @@ arr[i] < arr[j] for 1 <= i < j <= arr.length
  * @param {number} k
  * @return {number}
  */
-var findKthPositive = function(arr, k) {
-    let counter = 1;
-    const missingValue = [];
-    arr.some(elm =>{
-        while(counter!==elm){
-            missingValue.push(counter);
-            counter++;
-        }
-        counter++;
-        return missingValue.length === k;
-    });
-    if(missingValue.length<k){
-        while(missingValue.length<k){
-            missingValue.push(counter);
-            counter++;
-        }
+var findKthPositive = function (arr, k) {
+  let counter = 1;
+  const missingValue = [];
+  arr.some((elm) => {
+    while (counter !== elm) {
+      missingValue.push(counter);
+      counter++;
     }
-    return missingValue[k-1];
+    counter++;
+    return missingValue.length === k;
+  });
+  if (missingValue.length < k) {
+    while (missingValue.length < k) {
+      missingValue.push(counter);
+      counter++;
+    }
+  }
+  return missingValue[k - 1];
 };
 
 module.exports = findKthPositive;

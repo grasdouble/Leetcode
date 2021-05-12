@@ -47,33 +47,31 @@ s consists of English letters (lower-case and upper-case), ',' and '.'.
 1 <= numRows <= 1000
 */
 
-
 /**
  * @param {string} s
  * @param {number} numRows
  * @return {string}
  */
- const convert = function(s, numRows) {
-    let t =[];
-    let idx = 0;
-    let isUp = true;
-    s.split('').forEach(elm => {
-        if(!t[idx]) t[idx]=[];
-        t[idx].push(elm);
-        if(idx === numRows-1){
-            isUp=false;
-        }
-        if(idx === 0){
-            isUp= true;
-        }
-        idx= isUp ? idx+1 : idx-1;
-    });
-    result = [];
-    t.forEach(elm =>{
-      result.push(...elm)
-    });
-    return result.join('');
+const convert = function (s, numRows) {
+  let t = [];
+  let idx = 0;
+  let isUp = true;
+  s.split("").forEach((elm) => {
+    if (!t[idx]) t[idx] = [];
+    t[idx].push(elm);
+    if (idx === numRows - 1) {
+      isUp = false;
+    }
+    if (idx === 0) {
+      isUp = true;
+    }
+    idx = isUp ? idx + 1 : idx - 1;
+  });
+  result = [];
+  t.forEach((elm) => {
+    result.push(...elm);
+  });
+  return result.join("");
 };
-
 
 module.exports = convert;

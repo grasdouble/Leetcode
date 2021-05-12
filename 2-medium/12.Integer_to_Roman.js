@@ -60,64 +60,64 @@ Constraints:
 1 <= num <= 3999
 */
 
-
 const roman = [
-    {
-        beforeFour:'I',
-        equalFour:'IV',
-        beforeNine_First:'V',
-        beforeNine_Second:'I',
-        equalNine:'IX'
-    },
-    {
-        beforeFour:'X',
-        equalFour: 'XL',
-        beforeNine_First: 'L',
-        beforeNine_Second:'X',
-        equalNine: 'XC'
-    },
-    {
-        beforeFour: 'C',
-        equalFour: 'CD',
-        beforeNine_First: 'D',
-        beforeNine_Second: 'C',
-        equalNine: 'CM'
-    },
-    {
-        beforeFour: 'M',
-        equalFour: '',
-        beforeNine_First: '',
-        beforeNine_Second: '',
-        equalNine: ''
-    }
-    
+  {
+    beforeFour: "I",
+    equalFour: "IV",
+    beforeNine_First: "V",
+    beforeNine_Second: "I",
+    equalNine: "IX",
+  },
+  {
+    beforeFour: "X",
+    equalFour: "XL",
+    beforeNine_First: "L",
+    beforeNine_Second: "X",
+    equalNine: "XC",
+  },
+  {
+    beforeFour: "C",
+    equalFour: "CD",
+    beforeNine_First: "D",
+    beforeNine_Second: "C",
+    equalNine: "CM",
+  },
+  {
+    beforeFour: "M",
+    equalFour: "",
+    beforeNine_First: "",
+    beforeNine_Second: "",
+    equalNine: "",
+  },
 ];
 
 /**
  * @param {number} num
  * @return {string}
  */
-const intToRoman = function(num) {
-    const arr = num.toString().split('').reverse();
-    const result = [];
-    arr.forEach((elm,idx) => {
-        const elmInt = parseInt(elm);
-        let elmResult = '';
-        
-        if(elm != '0'){            
-            if(elmInt<4){
-                elmResult = roman[idx].beforeFour.repeat(elmInt);
-            }else if(elmInt === 4){
-                elmResult = roman[idx].equalFour;
-            }else if(elmInt < 9){
-                elmResult = roman[idx].beforeNine_First+roman[idx].beforeNine_Second.repeat(elmInt-5);
-            }else {
-                elmResult = roman[idx].equalNine;
-            }
-        }
-        result.push(elmResult);
-    });
-    return result.reverse().join('');
+const intToRoman = function (num) {
+  const arr = num.toString().split("").reverse();
+  const result = [];
+  arr.forEach((elm, idx) => {
+    const elmInt = parseInt(elm);
+    let elmResult = "";
+
+    if (elm != "0") {
+      if (elmInt < 4) {
+        elmResult = roman[idx].beforeFour.repeat(elmInt);
+      } else if (elmInt === 4) {
+        elmResult = roman[idx].equalFour;
+      } else if (elmInt < 9) {
+        elmResult =
+          roman[idx].beforeNine_First +
+          roman[idx].beforeNine_Second.repeat(elmInt - 5);
+      } else {
+        elmResult = roman[idx].equalNine;
+      }
+    }
+    result.push(elmResult);
+  });
+  return result.reverse().join("");
 };
 
 module.exports = intToRoman;
