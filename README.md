@@ -1,7 +1,7 @@
 # leetcode
 Leetcode is a project where you can retreive my submission made on leetcode.com
 
-![Logo leetcode](https://github.com/Sanoofr/Grabot/blob/main/README/leetcode_logo.jpg?raw=true "leetcode.com")
+![Logo leetcode](https://github.com/grasdouble/leetcode/blob/main/README/leetcode_logo.jpg?raw=true "leetcode.com")
 
 The submissions are sorted by difficulty (Easy, Medium and Hard)
 
