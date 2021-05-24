@@ -1,4 +1,4 @@
-# leetcode
+# Leetcode - Personal submissions on leetcode.com
 Leetcode is a project where you can retreive my submission made on leetcode.com
 
 ![Logo leetcode](https://github.com/grasdouble/leetcode/blob/main/README/leetcode_logo.jpg?raw=true "leetcode.com")
