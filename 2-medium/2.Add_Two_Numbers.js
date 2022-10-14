@@ -43,9 +43,9 @@ It is guaranteed that the list represents a number that does not have leading ze
  * }
  */
 
-const transformNode = (node, arr, isFirst) => {
+const transformNode = (node, arr) => {
   if (node.next) {
-    arr = transformNode(node.next, arr, false);
+    arr = transformNode(node.next, arr);
     arr = arr.concat(node.val);
   } else if (node.val > 0) {
     arr = arr.concat(node.val);
@@ -64,7 +64,7 @@ const transformToNode = (value, next) => {
  * @param {ListNode} l2
  * @return {ListNode}
  */
-const addTwoNumbers = function (l1, l2) {
+const addTwoNumbers = (l1, l2) => {
   const l1Value = BigInt(transformNode(l1, "") || 0);
   const l2Value = BigInt(transformNode(l2, "") || 0);
   const calcResult = BigInt(l1Value + l2Value).toString();

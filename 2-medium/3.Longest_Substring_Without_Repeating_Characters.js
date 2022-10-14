@@ -46,7 +46,7 @@ s consists of English letters, digits, symbols and spaces.
  */
 
 const lengthOfLongestSubstring = function (s) {
-  const ln = s.length;
+
   const arr = s.split("");
   const store = {};
   let result = 0;
