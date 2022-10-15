@@ -28,5 +28,5 @@ jobs:
       uses: im-open/process-jest-test-results@v2.0.6
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
-        results-file: './jest-results.json
+        results-file: './jest-results.json'
         create-status-check: true
