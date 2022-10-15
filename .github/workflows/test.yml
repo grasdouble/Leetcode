@@ -22,3 +22,11 @@ jobs:
         cache: 'yarn'
     - run: yarn install --frozen-lockfile
     - run: yarn test
+      continue-on-error: true
+    - name: Process jest results
+      if: always()
+      uses: im-open/process-jest-test-results@v2.0.6
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        results-file: './jest-results.json
+        create-status-check: true
