@@ -21,12 +21,7 @@ jobs:
         node-version: 16.x
         cache: 'yarn'
     - run: yarn install --frozen-lockfile
-    - run: yarn test
+    - run: yarn test --coverage
       continue-on-error: true
-    - name: Process jest results
-      if: always()
-      uses: im-open/process-jest-test-results@v2.0.6
-      with:
-        github-token: ${{ secrets.GITHUB_TOKEN }}
-        results-file: './jest-results.json'
-        create-status-check: true
+    - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v3
