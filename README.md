@@ -1,4 +1,6 @@
 # Leetcode - Personal submissions on leetcode.com
+[![CI test](https://github.com/grasdouble/Leetcode/actions/workflows/test.yml/badge.svg)](https://github.com/grasdouble/Leetcode/actions/workflows/test.yml)
+
 Leetcode is a project where you can retreive my submissions made on leetcode.com
 
 ![Logo leetcode](https://github.com/grasdouble/leetcode/blob/main/README/leetcode_logo.jpg?raw=true "leetcode.com")
