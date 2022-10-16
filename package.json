@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest test --json --outputFile=jest-results.json",
+    "test": "jest",
+    "test:ci": "jest test --json --outputFile=jest-results.json",
     "whiteboard": "jest ./whiteboard.test.js"
   },
   "author": "",
