@@ -1,4 +1,4 @@
-const uniqueMorseRepresentations = require("../804.Unique_Morse_Code_Words");
+const uniqueMorseRepresentations = require("../0804.Unique_Morse_Code_Words");
 
 describe("uniqueMorseRepresentations", () => {
   it("test", () => {

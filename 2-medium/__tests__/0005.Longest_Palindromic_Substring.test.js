@@ -1,4 +1,4 @@
-const longestPalindrome = require("../5.Longest_Palindromic_Substring");
+const longestPalindrome = require("../0005.Longest_Palindromic_Substring");
 
 describe("longestPalindrome", () => {
   it("test 1", () => {

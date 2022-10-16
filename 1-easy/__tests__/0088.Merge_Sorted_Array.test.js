@@ -1,4 +1,4 @@
-const merge = require("../88.Merge_Sorted_Array");
+const merge = require("../0088.Merge_Sorted_Array");
 
 describe("merge", () => {
   it("test", () => {

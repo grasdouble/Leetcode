@@ -1,4 +1,4 @@
-const reverse = require("../7.Reverse_Integer");
+const reverse = require("../0007.Reverse_Integer");
 
 describe("reverse", () => {
   it("test 1", () => {

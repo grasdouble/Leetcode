@@ -1,4 +1,4 @@
-const { mergeTwoLists, ListNode } = require("../21.Merge_Two_Sorted_Lists");
+const { mergeTwoLists, ListNode } = require("../0021.Merge_Two_Sorted_Lists");
 
 describe("Merge_Two_Sorted_Lists", () => {
   it("test 1", () => {

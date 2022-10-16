@@ -1,4 +1,4 @@
-const isMatch = require("../10.Regular_Expression_Matching");
+const isMatch = require("../0010.Regular_Expression_Matching");
 
 describe("isMatch", () => {
   it("test 1", () => {

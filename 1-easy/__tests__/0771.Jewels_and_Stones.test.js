@@ -4,7 +4,7 @@ const {
   numJewelsInStones3,
   numJewelsInStones4,
   numJewelsInStones5,
-} = require("../771.Jewels_and_Stones");
+} = require("../0771.Jewels_and_Stones");
 
 describe("numJewelsInStones1", () => {
   it("test", () => {

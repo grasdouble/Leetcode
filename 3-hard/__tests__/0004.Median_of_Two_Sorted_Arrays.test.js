@@ -1,4 +1,4 @@
-const findMedianSortedArrays = require("../4.Median_of_Two_Sorted_Arrays");
+const findMedianSortedArrays = require("../0004.Median_of_Two_Sorted_Arrays");
 
 describe("findMedianSortedArrays", () => {
   it("test 1", () => {

@@ -1,4 +1,4 @@
-const myAtoi = require("../8.String_to_Integer");
+const myAtoi = require("../0008.String_to_Integer");
 
 describe("myAtoi", () => {
   it("test 1", () => {

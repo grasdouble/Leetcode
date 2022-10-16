@@ -1,4 +1,4 @@
-const fizzBuzz = require("../412.Fizz_Buzz");
+const fizzBuzz = require("../0412.Fizz_Buzz");
 
 describe("fizzBuzz", () => {
   it("test", () => {

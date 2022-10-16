@@ -1,4 +1,4 @@
-const isPalindrome = require("../9.Palindrome_Number");
+const isPalindrome = require("../0009.Palindrome_Number");
 
 describe("reverse", () => {
   it("test 1", () => {

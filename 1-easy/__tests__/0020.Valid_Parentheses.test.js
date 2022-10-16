@@ -1,4 +1,4 @@
-const isValid = require("../20.Valid_Parentheses");
+const isValid = require("../0020.Valid_Parentheses");
 
 describe("isValid", () => {
   it("test 1", () => {

@@ -1,4 +1,4 @@
-const fn = require("../26.Remove_Duplicates_from_Sorted_Array");
+const fn = require("../0026.Remove_Duplicates_from_Sorted_Array");
 
 describe("template", () => {
   it("test 1", () => {

@@ -1,4 +1,4 @@
-const threeSum = require("../15.3Sum");
+const threeSum = require("../0015.3Sum");
 
 describe("threeSum", () => {
   it("test 1", () => {

@@ -1,4 +1,4 @@
-const longestCommonPrefix = require("../14.Longest_Common_Prefix");
+const longestCommonPrefix = require("../0014.Longest_Common_Prefix");
 
 describe("longestCommonPrefix", () => {
   it("test 1", () => {

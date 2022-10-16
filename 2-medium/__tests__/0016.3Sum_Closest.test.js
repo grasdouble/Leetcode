@@ -1,4 +1,4 @@
-const threeSumClosest = require("../16.3Sum_Closest");
+const threeSumClosest = require("../0016.3Sum_Closest");
 
 describe("threeSumClosest", () => {
   it("test 1", () => {

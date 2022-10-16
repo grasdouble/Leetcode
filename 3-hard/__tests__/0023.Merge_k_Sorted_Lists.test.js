@@ -1,4 +1,4 @@
-const { mergeKLists, ListNode } = require("../23.Merge_k_Sorted_Lists");
+const { mergeKLists, ListNode } = require("../0023.Merge_k_Sorted_Lists");
 
 describe("mergeKLists", () => {
   it("test 1", () => {

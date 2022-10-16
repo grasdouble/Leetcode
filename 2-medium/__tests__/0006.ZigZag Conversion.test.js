@@ -1,4 +1,4 @@
-const convert = require("../6.ZigZag_Conversion");
+const convert = require("../0006.ZigZag_Conversion");
 
 describe("convert", () => {
   it("test 1", () => {

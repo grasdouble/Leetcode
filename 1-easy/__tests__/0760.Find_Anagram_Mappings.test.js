@@ -1,4 +1,4 @@
-const anagramMappings = require("../760.Find_Anagram_Mappings");
+const anagramMappings = require("../0760.Find_Anagram_Mappings");
 
 describe("anagramMappings", () => {
   it("test", () => {

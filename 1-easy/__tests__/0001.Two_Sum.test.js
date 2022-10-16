@@ -1,4 +1,4 @@
-const twoSum = require("../1.Two_Sum");
+const twoSum = require("../0001.Two_Sum");
 
 describe("twoSum", () => {
   it("test", () => {
